@@ -1,0 +1,196 @@
+{
+  "project": "AD Madureira — Sistema Eclesiástico",
+  "version": "2.5.0",
+  "component": "OnboardingExperience",
+  "visualSystem": {
+    "viewport": {
+      "aspectRatio": "0.46:1",
+      "referenceDimensions": "333x720px / 390x844px",
+      "orientation": "portrait",
+      "sideMarginPx": "18-20px"
+    },
+    "colorPalette": {
+      "backgroundMain": "#101114",
+      "backgroundElevated": "#1D2026",
+      "textPrimary": "#F3F3F3",
+      "textSecondary": "#A7A9AE",
+      "accentBlue": "#162738",
+      "accentOrange": "#EA580C",
+      "accentGreen": "#10B981",
+      "coverGradient": {
+        "from": "#A5C0C7",
+        "via": "#2F4A52",
+        "to": "#121B1E"
+      }
+    },
+    "typography": {
+      "fontFamily": "Inter, -apple-system, sans-serif",
+      "titleSize": "22-24px",
+      "titleLineHeight": "27px",
+      "fontWeight": "400-500",
+      "buttonHeight": "48px"
+    }
+  },
+  "screens": [
+    {
+      "id": 1,
+      "name": "Marca / Splash Screen",
+      "role": "Pantalla de presentación inicial y carga de la marca",
+      "background": "#101114",
+      "elements": {
+        "symbol": "Signo '+' formado por dos trazos redondeados gris claro (#C5C7CC) de ~40px",
+        "title": "AD MADUREIRA",
+        "titleStyle": "Mayúsculas pequeñas, espaciado amplio tracking de 8-9px"
+      },
+      "interactions": {
+        "autoTransitionMs": 1600,
+        "onClick": "Transiciona de inmediato a la Pantalla 2",
+        "animation": "Fundido de entrada sobrio"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Actualización de Datos",
+      "headline": "Sua vida de membro,\norganizada em um só lugar",
+      "headerAction": "Pular >",
+      "progressStep": 1,
+      "totalSteps": 5,
+      "illustration": {
+        "type": "layered-cards",
+        "card1": "Documento azul oscuro al fondo (#162233) inclinado a la izquierda (-12°)",
+        "card2": "Documento rojizo/terracota al frente (#381B1D) inclinado a la derecha (+6°)",
+        "interfaceCard": {
+          "background": "#1D2026",
+          "text": "Quero atualizar meus dados e emitir minha credencial.",
+          "badge": "Membro >",
+          "actionIcon": "ArrowUp"
+        }
+      },
+      "bottomButton": {
+        "text": "Continuar",
+        "nextScreen": 3
+      }
+    },
+    {
+      "id": 3,
+      "name": "Documentos, Avisos e Credencial",
+      "tag": "Tudo conectado",
+      "headline": "Documentos, avisos e\ncredencial. Tudo aqui.",
+      "headerAction": "Pular >",
+      "progressStep": 2,
+      "totalSteps": 5,
+      "illustration": {
+        "type": "icon-grid-with-card",
+        "topIcons": [
+          { "type": "credencial", "bg": "#FFFFFF", "fg": "#000000", "tilt": "-6deg" },
+          { "type": "cruz-plus", "bg": "#1D2026", "fg": "#FFFFFF", "tilt": "+3deg" },
+          { "type": "documento", "bg": "#EA580C", "fg": "#FFFFFF", "tilt": "-3deg" }
+        ],
+        "interfaceCard": {
+          "text": "Adicionar os comunicados da minha igreja.",
+          "pill": "Automático >"
+        },
+        "bottomIcons": [
+          { "type": "campana", "bg": "#1E293B", "fg": "#38BDF8", "tilt": "-6deg" },
+          { "type": "iglesia", "bg": "#FFFFFF", "fg": "#000000", "tilt": "+3deg" },
+          { "type": "calendario", "bg": "#D97706", "fg": "#FFFFFF", "tilt": "-3deg" },
+          { "type": "corazon", "bg": "#7C3AED", "fg": "#FFFFFF", "tilt": "+6deg" }
+        ]
+      },
+      "bottomButton": {
+        "text": "Continuar",
+        "nextScreen": 4
+      }
+    },
+    {
+      "id": 4,
+      "name": "Certificados e Cartas",
+      "headline": "Peça certificados e cartas\nem poucos cliques",
+      "headerAction": "Pular >",
+      "progressStep": 3,
+      "totalSteps": 5,
+      "illustration": {
+        "type": "request-lifecycle",
+        "statusChip": "↗ Pedido enviado",
+        "analysisCard": {
+          "status": "Analisando solicitação",
+          "checks": ["Dados do membro confirmados", "Documento validado"]
+        },
+        "highlightCard": {
+          "header": "✓ Seu documento está pronto",
+          "document": "Carta de Recomendação",
+          "detail": "Assinada e com selo oficial",
+          "action": "ABRIR"
+        }
+      },
+      "bottomButton": {
+        "text": "Continuar",
+        "nextScreen": 5
+      }
+    },
+    {
+      "id": 5,
+      "name": "Cursos e Atividade",
+      "headline": "Acompanhe cultos e fique\nperto da sua igreja",
+      "headerAction": "Pular >",
+      "progressStep": 4,
+      "totalSteps": 5,
+      "illustration": {
+        "type": "activity-dashboard",
+        "events": [
+          { "name": "Escola Bíblica", "schedule": "DOM • 09H", "icon": "BookOpen" },
+          { "name": "Culto Geral", "schedule": "DOM • 18H", "icon": "Church" }
+        ],
+        "chart": {
+          "label": "Sua jornada este mês",
+          "badge": "PRÓXIMOS 06",
+          "type": "green-neon-line-chart",
+          "timeline": ["SEM 1", "SEM 2", "SEM 3", "SEM 4"]
+        },
+        "floatingTag": "Você está em dia • 2 avisos novos"
+      },
+      "bottomButton": {
+        "text": "Começar",
+        "nextScreen": 6
+      }
+    },
+    {
+      "id": 6,
+      "name": "Portada / Acceso al Sistema",
+      "background": "linear-gradient(to bottom, #A5C0C7, #2F4A52, #121B1E)",
+      "headerAction": "← Voltar",
+      "brand": {
+        "icon": "Cruz '+' en caja oscura redondeada",
+        "title": "ADM MADUREIRA",
+        "subtitle": "Sua igreja, seus documentos e sua jornada. Sempre com você."
+      },
+      "cards": [
+        {
+          "type": "member-access",
+          "badge": "Acesso seguro",
+          "title": "MEMBRO",
+          "description": "Para quem faz parte da nossa família.",
+          "modeSelector": ["Portal completo do membro", "Acesso Secretaria & Pastor"],
+          "pricing": "Gratuito / para membros",
+          "primaryAction": {
+            "label": "Entrar no Portal",
+            "target": "login-modal"
+          },
+          "benefits": [
+            "Credencial digital sempre disponível",
+            "Certificados, cartas e expediente",
+            "Avisos, cultos e petições pastorais"
+          ],
+          "securityNotice": "Seus dados protegidos e sob seu controle"
+        },
+        {
+          "type": "visitor-access",
+          "icon": "Compass",
+          "title": "Visitante",
+          "subtitle": "Conheça nosso portal público",
+          "action": "open-public-portal"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,225 @@
+{
+  "system": {
+    "name": "AD Madureira Authentication Experience",
+    "theme": "iOS Dark Mode / Editorial Luxury Glassmorphism",
+    "version": "2.0.0",
+    "viewport": {
+      "targetDevice": "iPhone Super Retina XDR (19.5:9)",
+      "logicalResolution": "393 x 852 pt",
+      "safeAreaTop": "54 pt",
+      "safeAreaBottom": "34 pt",
+      "horizontalMargin": "24 pt",
+      "contentWidth": "345 pt"
+    },
+    "tokens": {
+      "colors": {
+        "background": "#000000",
+        "surface": "#18181B",
+        "surfaceHover": "#27272A",
+        "surfaceBorder": "rgba(255, 255, 255, 0.10)",
+        "surfaceGlass": "rgba(24, 24, 27, 0.85)",
+        "textPrimary": "#FFFFFF",
+        "textSecondary": "#A1A1AA",
+        "textTertiary": "#71717A",
+        "accent": "#FFFFFF",
+        "accentText": "#000000",
+        "error": "#EF4444",
+        "success": "#10B981"
+      },
+      "typography": {
+        "fontFamily": "Inter, SF Pro Display, -apple-system, sans-serif",
+        "title": { "size": "30-32px", "weight": "bold", "color": "#FFFFFF", "lineHeight": "36px" },
+        "subtitle": { "size": "16px", "weight": "normal", "color": "#A1A1AA", "lineHeight": "22px" },
+        "label": { "size": "13px", "weight": "500", "color": "#D4D4D8" },
+        "input": { "size": "16px", "weight": "normal", "color": "#FFFFFF" },
+        "button": { "size": "17px", "weight": "600", "color": "#000000" },
+        "footer": { "size": "14px", "weight": "normal", "color": "#A1A1AA" }
+      },
+      "shapes": {
+        "inputRadius": "16px",
+        "buttonRadius": "9999px",
+        "cardRadius": "24px",
+        "socialButtonRadius": "16px"
+      }
+    }
+  },
+  "screens": [
+    {
+      "id": "login",
+      "name": "Bem-vindo de volta!",
+      "route": "/login",
+      "header": {
+        "showBackButton": true,
+        "backButtonLabel": "Pular",
+        "backButtonAction": "skip_or_public_portal"
+      },
+      "illustration": {
+        "type": "floating_glass_cards",
+        "cards": [
+          {
+            "id": "back_card",
+            "tone": "dark_slate_blue",
+            "backgroundColor": "#16202A",
+            "borderColor": "rgba(56, 189, 248, 0.25)",
+            "rotation": "10deg",
+            "icon": "Lock",
+            "lines": 2
+          },
+          {
+            "id": "front_card",
+            "tone": "charcoal_glass",
+            "backgroundColor": "rgba(29, 32, 38, 0.90)",
+            "borderColor": "rgba(255, 255, 255, 0.15)",
+            "rotation": "-8deg",
+            "icon": "User",
+            "lines": 2
+          }
+        ]
+      },
+      "carouselDots": {
+        "count": 3,
+        "activeIndex": 0
+      },
+      "fields": [
+        {
+          "name": "email",
+          "label": "E-mail",
+          "placeholder": "Seu e-mail",
+          "type": "email",
+          "leftIcon": "Mail",
+          "required": true
+        },
+        {
+          "name": "password",
+          "label": "Senha",
+          "placeholder": "Sua senha",
+          "type": "password",
+          "leftIcon": "Lock",
+          "rightIcon": "EyeToggle",
+          "required": true
+        }
+      ],
+      "actions": {
+        "forgotPassword": {
+          "label": "Esqueceu sua senha?",
+          "position": "right"
+        },
+        "primaryButton": {
+          "label": "Entrar",
+          "shape": "pill",
+          "backgroundColor": "#FFFFFF",
+          "textColor": "#000000"
+        },
+        "divider": {
+          "label": "ou"
+        },
+        "socialButtons": [
+          { "provider": "apple", "icon": "Apple" },
+          { "provider": "google", "icon": "Google" }
+        ],
+        "footerToggle": {
+          "question": "Ainda não tem uma conta?",
+          "actionLabel": "Cadastrar",
+          "targetScreen": "register"
+        }
+      }
+    },
+    {
+      "id": "register",
+      "name": "Crie sua conta",
+      "route": "/register",
+      "header": {
+        "showBackButton": true,
+        "backButtonLabel": "Pular",
+        "backButtonAction": "skip_or_public_portal"
+      },
+      "illustration": {
+        "type": "floating_glass_cards",
+        "cards": [
+          {
+            "id": "back_card",
+            "tone": "dark_wine_terracotta",
+            "backgroundColor": "#2A181A",
+            "borderColor": "rgba(239, 68, 68, 0.25)",
+            "rotation": "10deg",
+            "icon": "FileText",
+            "lines": 2
+          },
+          {
+            "id": "front_card",
+            "tone": "charcoal_glass",
+            "backgroundColor": "rgba(29, 32, 38, 0.90)",
+            "borderColor": "rgba(255, 255, 255, 0.15)",
+            "rotation": "-8deg",
+            "icon": "UserPlus",
+            "lines": 2
+          }
+        ]
+      },
+      "carouselDots": {
+        "count": 3,
+        "activeIndex": 1
+      },
+      "fields": [
+        {
+          "name": "name",
+          "label": "Nome completo",
+          "placeholder": "Seu nome completo",
+          "type": "text",
+          "leftIcon": "User",
+          "required": true
+        },
+        {
+          "name": "email",
+          "label": "E-mail",
+          "placeholder": "Seu e-mail",
+          "type": "email",
+          "leftIcon": "Mail",
+          "required": true
+        },
+        {
+          "name": "password",
+          "label": "Senha",
+          "placeholder": "Crie uma senha",
+          "type": "password",
+          "leftIcon": "Lock",
+          "rightIcon": "EyeToggle",
+          "required": true
+        },
+        {
+          "name": "city",
+          "label": "Sua Cidade / Filial ADM",
+          "placeholder": "Selecione onde congrega",
+          "type": "select",
+          "leftIcon": "Church",
+          "required": true
+        }
+      ],
+      "passwordValidationRules": [
+        { "id": "len", "label": "Pelo menos 8 caracteres", "regex": ".{8,}" },
+        { "id": "alphanumeric", "label": "Uma letra e um número", "regex": "(?=.*[a-zA-Z])(?=.*[0-9])" },
+        { "id": "special", "label": "Um caractere especial (ex.: !@#)", "regex": "[!@#$%^&*(),.?\":{}|<>]" }
+      ],
+      "actions": {
+        "primaryButton": {
+          "label": "Criar conta",
+          "shape": "pill",
+          "backgroundColor": "#FFFFFF",
+          "textColor": "#000000"
+        },
+        "divider": {
+          "label": "ou"
+        },
+        "socialButtons": [
+          { "provider": "apple", "icon": "Apple" },
+          { "provider": "google", "icon": "Google" }
+        ],
+        "footerToggle": {
+          "question": "Já tem uma conta?",
+          "actionLabel": "Entrar",
+          "targetScreen": "login"
+        }
+      }
+    }
+  ]
+}

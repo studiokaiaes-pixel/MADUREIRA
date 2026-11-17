@@ -1,0 +1,8 @@
+{
+  "name": "SISTEMA DE MADUREIRA 3.0",
+  "description": "Plataforma de autenticación y gestión jerárquica con consola de usuario root fantasma, vista previa de administradores y configuraciones silenciosas de servidor.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

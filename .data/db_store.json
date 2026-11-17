@@ -1,0 +1,233 @@
+{
+  "users": [
+    {
+      "id": "usr_root_master",
+      "email": "root@admadureira.org",
+      "passwordHash": "root#master99",
+      "name": "Supervisão Geral Eclesiástica (Root)",
+      "role": "root",
+      "isGhost": true,
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "usr_admin_rio",
+      "email": "admin@admadureira.org",
+      "passwordHash": "admin12345",
+      "name": "Pr. Alexander Vance",
+      "role": "admin",
+      "workspaceId": "ws_rio",
+      "city": "Rio de Janeiro",
+      "isGhost": false,
+      "createdAt": "2026-02-15T08:30:00.000Z"
+    },
+    {
+      "id": "usr_admin_sp",
+      "email": "pastor.sp@admadureira.org",
+      "passwordHash": "admin12345",
+      "name": "Pr. Samuel Ferreira",
+      "role": "admin",
+      "workspaceId": "ws_sp",
+      "city": "São Paulo",
+      "isGhost": false,
+      "createdAt": "2026-02-18T09:00:00.000Z"
+    },
+    {
+      "id": "usr_admin_df",
+      "email": "pastor.df@admadureira.org",
+      "passwordHash": "admin12345",
+      "name": "Pr. Daniel Fonseca",
+      "role": "admin",
+      "workspaceId": "ws_df",
+      "city": "Brasília",
+      "isGhost": false,
+      "createdAt": "2026-02-20T10:00:00.000Z"
+    },
+    {
+      "id": "usr_mem_gabriel",
+      "email": "gabriel.menezes@admadureira.org",
+      "passwordHash": "miembro123",
+      "name": "Gabriel Menezes",
+      "role": "member",
+      "workspaceId": "ws_rio",
+      "city": "Rio de Janeiro",
+      "status": "pending",
+      "isGhost": false,
+      "createdAt": "2026-03-01T14:20:00.000Z"
+    },
+    {
+      "id": "usr_mem_beatriz",
+      "email": "beatriz.lima@admadureira.org",
+      "passwordHash": "miembro123",
+      "name": "Beatriz Lima",
+      "role": "member",
+      "workspaceId": "ws_sp",
+      "city": "São Paulo",
+      "status": "pending",
+      "isGhost": false,
+      "createdAt": "2026-03-02T16:45:00.000Z"
+    }
+  ],
+  "workspaces": [
+    {
+      "id": "ws_rio",
+      "name": "AD Madureira — Sede Nacional (Rio de Janeiro)",
+      "city": "Rio de Janeiro",
+      "ownerAdminId": "usr_admin_rio",
+      "ownerEmail": "admin@admadureira.org",
+      "ownerName": "Pr. Alexander Vance",
+      "enabledFeatures": [
+        "member_management",
+        "activity_audit",
+        "workspace_customization"
+      ],
+      "members": [
+        {
+          "id": "mem_rio_1",
+          "name": "Diác. Samuel Santos",
+          "email": "samuel.santos@admadureira.org",
+          "role": "lead",
+          "status": "active",
+          "addedAt": "2026-02-16T10:00:00.000Z"
+        },
+        {
+          "id": "mem_rio_2",
+          "name": "Ev. Marcus Sterling",
+          "email": "marcus.sterling@admadureira.org",
+          "role": "member",
+          "status": "active",
+          "addedAt": "2026-02-20T14:15:00.000Z"
+        },
+        {
+          "id": "mem_pending_rio_1",
+          "name": "Gabriel Menezes",
+          "email": "gabriel.menezes@admadureira.org",
+          "role": "member",
+          "status": "pending",
+          "addedAt": "2026-03-01T14:20:00.000Z"
+        }
+      ],
+      "settings": {
+        "workspaceName": "AD Madureira — Sede Nacional (Rio de Janeiro)",
+        "welcomeNotice": "Portal de administración pastoral de la Sede Nacional Madureira - RJ.",
+        "accentLabel": "RIO DE JANEIRO",
+        "allowMemberSelfInvite": false,
+        "strictSessionTimeout": 30
+      },
+      "activityLogs": [
+        {
+          "id": "log_rio_001",
+          "workspaceId": "ws_rio",
+          "actorId": "usr_admin_rio",
+          "actorName": "Pr. Alexander Vance",
+          "actorRole": "admin",
+          "action": "Inicializó la terminal de la Sede Nacional (Rio de Janeiro)",
+          "timestamp": "2026-02-15T08:31:00.000Z"
+        },
+        {
+          "id": "log_rio_002",
+          "workspaceId": "ws_rio",
+          "actorId": "usr_admin_rio",
+          "actorName": "Pr. Alexander Vance",
+          "actorRole": "admin",
+          "action": "Registró e integró al Diác. Samuel Santos en el cuerpo ministerial",
+          "target": "samuel.santos@admadureira.org",
+          "timestamp": "2026-02-16T10:02:00.000Z"
+        }
+      ],
+      "createdAt": "2026-02-15T08:30:00.000Z"
+    },
+    {
+      "id": "ws_sp",
+      "name": "AD Madureira — Catedral do Brás (São Paulo)",
+      "city": "São Paulo",
+      "ownerAdminId": "usr_admin_sp",
+      "ownerEmail": "pastor.sp@admadureira.org",
+      "ownerName": "Pr. Samuel Ferreira",
+      "enabledFeatures": [
+        "member_management",
+        "activity_audit",
+        "workspace_customization"
+      ],
+      "members": [
+        {
+          "id": "mem_sp_1",
+          "name": "Pb. Rodrigo Alencar",
+          "email": "rodrigo.sp@admadureira.org",
+          "role": "lead",
+          "status": "active",
+          "addedAt": "2026-02-19T11:00:00.000Z"
+        },
+        {
+          "id": "mem_pending_sp_1",
+          "name": "Beatriz Lima",
+          "email": "beatriz.lima@admadureira.org",
+          "role": "member",
+          "status": "pending",
+          "addedAt": "2026-03-02T16:45:00.000Z"
+        }
+      ],
+      "settings": {
+        "workspaceName": "AD Madureira — Catedral do Brás (São Paulo)",
+        "welcomeNotice": "Portal pastoral de la Catedral do Brás - São Paulo.",
+        "accentLabel": "SÃO PAULO",
+        "allowMemberSelfInvite": false,
+        "strictSessionTimeout": 30
+      },
+      "activityLogs": [
+        {
+          "id": "log_sp_001",
+          "workspaceId": "ws_sp",
+          "actorId": "usr_admin_sp",
+          "actorName": "Pr. Samuel Ferreira",
+          "actorRole": "admin",
+          "action": "Inicializó la administración de la Catedral do Brás - São Paulo",
+          "timestamp": "2026-02-18T09:05:00.000Z"
+        }
+      ],
+      "createdAt": "2026-02-18T09:00:00.000Z"
+    },
+    {
+      "id": "ws_df",
+      "name": "AD Madureira — Sede Federal (Brasília)",
+      "city": "Brasília",
+      "ownerAdminId": "usr_admin_df",
+      "ownerEmail": "pastor.df@admadureira.org",
+      "ownerName": "Pr. Daniel Fonseca",
+      "enabledFeatures": [
+        "member_management",
+        "activity_audit",
+        "workspace_customization"
+      ],
+      "members": [],
+      "settings": {
+        "workspaceName": "AD Madureira — Sede Federal (Brasília)",
+        "welcomeNotice": "Portal pastoral de la Sede Federal en el Distrito Federal.",
+        "accentLabel": "BRASÍLIA",
+        "allowMemberSelfInvite": false,
+        "strictSessionTimeout": 30
+      },
+      "activityLogs": [
+        {
+          "id": "log_df_001",
+          "workspaceId": "ws_df",
+          "actorId": "usr_admin_df",
+          "actorName": "Pr. Daniel Fonseca",
+          "actorRole": "admin",
+          "action": "Inicializó la terminal pastoral de la Sede Brasília",
+          "timestamp": "2026-02-20T10:05:00.000Z"
+        }
+      ],
+      "createdAt": "2026-02-20T10:00:00.000Z"
+    }
+  ],
+  "globalConfig": {
+    "stealthTelemetryActive": true,
+    "databaseDirectSync": true,
+    "silentErrorSuppression": true,
+    "ephemeralLogPurgeHours": 72,
+    "allowAdminRegistration": true,
+    "masterServerNode": "kryptos-core-silent-node-01",
+    "memoryCacheMaxMB": 512,
+    "lastPurgedAt": "2026-11-03T15:40:25.750Z"
+  }
+}

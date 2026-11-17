@@ -1,0 +1,37 @@
+{
+  "root_1793719720665_trfrls1c": {
+    "userId": "usr_root_master",
+    "previewTargetAdminId": "usr_admin_df",
+    "createdAt": 1793719720665
+  },
+  "root_1793720431474_4yfwprn7": {
+    "userId": "usr_root_master",
+    "previewTargetAdminId": null,
+    "createdAt": 1793720431474
+  },
+  "admin_1793720436477_kf5105xt": {
+    "userId": "usr_admin_rio",
+    "previewTargetAdminId": null,
+    "createdAt": 1793720436477
+  },
+  "admin_1793720450890_7vmc4slf": {
+    "userId": "usr_admin_rio",
+    "previewTargetAdminId": null,
+    "createdAt": 1793720450890
+  },
+  "root_1793720457710_xhnnnn9b": {
+    "userId": "usr_root_master",
+    "previewTargetAdminId": null,
+    "createdAt": 1793720457710
+  },
+  "root_1793720479317_cm7wjt2c": {
+    "userId": "usr_root_master",
+    "previewTargetAdminId": null,
+    "createdAt": 1793720479317
+  },
+  "root_1793720487720_fevhg2c7": {
+    "userId": "usr_root_master",
+    "previewTargetAdminId": null,
+    "createdAt": 1793720487720
+  }
+}

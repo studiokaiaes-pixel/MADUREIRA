@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', sans-serif;
+    --font-serif-italic: 'Playfair Display', Georgia, serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    background-color: #000000;
+    color: #f5f5f7;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: #ffffff;
+    color: #000000;
+  }
+}
+
+/* Tipografías y tamaños exactos de los modelos de fotos (Taskk & Subscription iOS Dark Mode) */
+.font-display-title {
+  font-family: var(--font-sans);
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.028em;
+  color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .font-display-title {
+    font-size: 32px;
+  }
+}
+
+.font-subheading {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.45;
+  font-weight: 400;
+  color: #8e8e93;
+}
+
+.font-label-eyebrow {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #8e8e93;
+}
+
+.font-card-title {
+  font-family: var(--font-sans);
+  font-size: 22px;
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+.font-row-title {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: #ffffff;
+}
+
+.font-row-subtitle {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.35;
+  color: #8e8e93;
+}
+
+.font-btn-primary {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.font-hero-italic {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.font-editorial {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+}
+
+.font-mono-numbers {
+  font-family: 'JetBrains Mono', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Reglas de impresión para Ficha Oficial A4 (Word Modelo) */
+@media print {
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .no-print,
+  header,
+  nav,
+  aside,
+  footer,
+  button,
+  .sidebar-container {
+    display: none !important;
+  }
+
+  #printable-official-ficha {
+    display: block !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 15mm 20mm !important;
+    border: none !important;
+    box-shadow: none !important;
+    background: #ffffff !important;
+    page-break-after: avoid !important;
+  }
+}
